@@ -1,10 +1,11 @@
+
 interface RelatedPackagesProps {
     onOpenLeadForm: (packageInterest: string) => void;
 }
 
 const packages = [
     {
-        image: '/assets/generated/honeymoon-kerala.dim_600x400.jpg',
+        image: '/assets/honeymoon-kerala.dim_600x400.jpg',
         name: 'Kerala Honeymoon',
         duration: '4N / 5D',
         price: '₹16,999',
@@ -12,7 +13,7 @@ const packages = [
         interest: 'Kerala Honeymoon',
     },
     {
-        image: '/assets/generated/family-kerala.dim_600x400.jpg',
+        image: '/assets/family-kerala.dim_600x400.jpg',
         name: 'Kerala Family Tour',
         duration: '6N / 7D',
         price: '₹21,499',
@@ -20,7 +21,7 @@ const packages = [
         interest: 'Kerala Family Tour',
     },
     {
-        image: '/assets/generated/luxury-kerala.dim_600x400.jpg',
+        image: '/assets/luxury-kerala.dim_600x400.jpg',
         name: 'Luxury Kerala',
         duration: '5N / 6D',
         price: '₹32,999',
@@ -28,7 +29,7 @@ const packages = [
         interest: 'Luxury Kerala',
     },
     {
-        image: '/assets/generated/short-kerala.dim_600x400.jpg',
+        image: '/assets/short-kerala.dim_600x400.jpg',
         name: 'Short 3N/4D Getaway',
         duration: '3N / 4D',
         price: '₹12,999',
