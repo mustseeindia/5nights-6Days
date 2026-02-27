@@ -192,6 +192,14 @@ export default function LeadFormModal({ isOpen, onClose, packageInterest }: Lead
                     className="px-6 pt-6 pb-5 text-white"
                     style={{ backgroundColor: 'oklch(0.24 0.1 155)' }}
                 >
+                    <button
+    type="button"
+    onClick={handleClose}
+    className="absolute top-4 right-4 text-white/70 hover:text-white text-lg font-semibold"
+    aria-label="Close"
+>
+    ×
+</button>
                     <DialogHeader>
                         <DialogTitle className="text-xl font-bold text-white font-display">
                             Get Free Customized Quote
