@@ -20,6 +20,7 @@ export default defineConfig({
     emptyOutDir: true,
     sourcemap: false,
     minify: false,
+    assetsDir: 'assets'
   },
   css: {
     postcss: "./postcss.config.js",
