@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import BrandBanner from './components/BrandBanner';
 import HeroSection from './components/HeroSection';
 import WhyVisitKerala from './components/WhyVisitKerala';
@@ -15,12 +15,6 @@ import PageFooter from './components/PageFooter';
 
 export default function App() {
     const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
-
-    // Load Zoho SalesIQ after React has fully mounted — isolated, non-blocking
-    
-
-        // Initialize $zoho namespace
-        
     const [selectedPackageInterest, setSelectedPackageInterest] = useState('General');
 
     const handleOpenLeadForm = (packageInterest: string) => {
@@ -34,50 +28,28 @@ export default function App() {
 
     return (
         <div className="min-h-screen" style={{ fontFamily: 'Inter, sans-serif' }}>
-            {/* Brand Banner */}
             <BrandBanner />
 
-            {/* Main content */}
             <main>
-                {/* Hero */}
                 <HeroSection onOpenLeadForm={handleOpenLeadForm} />
-
-                {/* Why Visit Kerala */}
-                
-
-                {/* Itinerary */}
-            
-
-                {/* Inclusions & Exclusions */}
-    
-
-                {/* Pricing */}
+                <WhyVisitKerala />
+                <Itinerary />
+                <Inclusions />
                 <Pricing onOpenLeadForm={handleOpenLeadForm} />
-
-                {/* Related Packages */}
                 <RelatedPackages onOpenLeadForm={handleOpenLeadForm} />
-
-                {/* Testimonials */}
                 <Testimonials />
-
-                {/* FAQ */}
                 <FAQ />
-
-                {/* Final CTA */}
                 <FinalCTA onOpenLeadForm={handleOpenLeadForm} />
             </main>
 
-            {/* Footer */}
             <PageFooter />
 
-            {/* Global Lead Form Modal */}
             <LeadFormModal
                 isOpen={isLeadFormOpen}
                 onClose={handleCloseLeadForm}
                 packageInterest={selectedPackageInterest}
             />
 
-            {/* Sticky WhatsApp Button */}
             <WhatsAppButton />
         </div>
     );
