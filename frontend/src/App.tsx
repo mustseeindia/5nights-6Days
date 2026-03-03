@@ -17,9 +17,7 @@ export default function App() {
     const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
 
     // Load Zoho SalesIQ after React has fully mounted — isolated, non-blocking
-    useEffect(() => {
-        // Guard: don't load twice
-        if (document.getElementById('zsiqscript')) return;
+    
 
         // Initialize $zoho namespace
         
