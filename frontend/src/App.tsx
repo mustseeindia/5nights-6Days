@@ -32,9 +32,7 @@ export default function App() {
 
             <main>
                 <HeroSection onOpenLeadForm={handleOpenLeadForm} />
-                <WhyVisitKerala />
-                <Itinerary />
-                <Inclusions />
+                
                 <Pricing onOpenLeadForm={handleOpenLeadForm} />
                 <RelatedPackages onOpenLeadForm={handleOpenLeadForm} />
                 <Testimonials />
