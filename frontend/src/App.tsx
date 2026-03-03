@@ -22,22 +22,7 @@ export default function App() {
         if (document.getElementById('zsiqscript')) return;
 
         // Initialize $zoho namespace
-        (window as any).$zoho = (window as any).$zoho || {};
-        (window as any).$zoho.salesiq = (window as any).$zoho.salesiq || { ready: function() {} };
-
-        const script = document.createElement('script');
-        script.id = 'zsiqscript';
-        script.src = 'https://salesiq.zohopublic.in/widget?wc=siqe921f594431a5843d752738f4883000f5cda6109f2f1ee89762e918d98028590';
-        script.async = true;
-        script.defer = true;
-        document.body.appendChild(script);
-
-        // Cleanup on unmount (dev hot-reload safety)
-        return () => {
-            const el = document.getElementById('zsiqscript');
-            if (el) el.remove();
-        };
-    }, []);
+        
     const [selectedPackageInterest, setSelectedPackageInterest] = useState('General');
 
     const handleOpenLeadForm = (packageInterest: string) => {
@@ -60,13 +45,13 @@ export default function App() {
                 <HeroSection onOpenLeadForm={handleOpenLeadForm} />
 
                 {/* Why Visit Kerala */}
-                <WhyVisitKerala onOpenLeadForm={handleOpenLeadForm} />
+                
 
                 {/* Itinerary */}
-                <Itinerary onOpenLeadForm={handleOpenLeadForm} />
+            
 
                 {/* Inclusions & Exclusions */}
-                <Inclusions />
+    
 
                 {/* Pricing */}
                 <Pricing onOpenLeadForm={handleOpenLeadForm} />
